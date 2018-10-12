@@ -24,13 +24,14 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-load-plugins": "^0.10.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.0.0",
+    "gulp-sass": "^2.3.2",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.0",
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^3.0.0",
     "http-proxy": "^1.15.1",
     "main-bower-files": "^2.5.0",
+    "node-sass": "^4.9.3",
     "wiredep": "^2.2.2"
   },
   "eslintConfig": {
@@ -47,6 +48,9 @@
     }
   },
   "dependencies": {
-    "grunt": "^1.0.3"
+    "express": "^4.16.4",
+    "grunt": "^1.0.3",
+    "gzippo": "^0.2.0",
+    "morgan": "^1.9.1"
   }
 }

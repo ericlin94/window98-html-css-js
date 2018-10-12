@@ -1,5 +1,6 @@
 // generated on 2016-08-31 using generator-webapp 2.1.0
 const gulp = require('gulp');
+var sass = require('gulp-sass');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
@@ -25,7 +26,11 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
-
+gulp.task('sass', function () {
+  gulp.src('./app/styles/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
     .pipe($.plumber())
